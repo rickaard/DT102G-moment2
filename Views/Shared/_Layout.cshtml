@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Moment 2 - @ViewData["Title"]</title>
+    <link rel="stylesheet" href="~/css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <div class="container">
+
+        <nav class="nav-wrapper box-shadow">
+            
+            <div class="logo-wrapper">
+                <a asp-controller="Home" asp-action="Index"><img src="images/asp.net-logo.png" alt="ASP dot NET logo"></a>
+            </div>
+
+            <button class="menuBtn">☰</button>
+
+            <div class="nav-items">
+                <ul>
+                    <li><button class="closeBtn">x</button></li>
+                    <li>
+                        <a class='@((ViewBag.PageName == "index") ? "active" : "")' asp-controller="Home" asp-action="Index">Hem</a>
+                    </li>
+                    <li>
+                        <a class='@((ViewBag.PageName == "mvc") ? "active" : "")' asp-controller="Home" asp-action="MVC">MVC</a>
+                    </li>
+                    <li>
+                        <a class='@((ViewBag.PageName == "bmi") ? "active" : "")' asp-controller="Home" asp-action="BMI">BMI</a>
+                    </li>
+                </ul>
+            </div>
+
+        </nav>
+        <div class="bg-wrapper">
+
+
+            <main class="content-wrapper">
+                @RenderBody()
+            </main>
+
+            <footer>
+
+            </footer>
+        </div>
+
+    </div>
+    <script src="~/js/main.js"></script>
+</body>
+</html>

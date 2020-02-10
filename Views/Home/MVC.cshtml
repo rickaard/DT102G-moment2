@@ -1,0 +1,22 @@
+@model IEnumerable<moment2.Models.InfoModel>
+@{
+    ViewData["Title"] = "MVC";
+    ViewBag.PageName = "mvc";
+}
+
+<h2>MVC</h2>
+
+<div class="items-container">
+    @foreach (var infoItem in Model)
+    {
+        <div class="item-wrapper">
+            <img src=@infoItem.Image alt=@infoItem.Title />
+            <h4>@infoItem.Title</h4>
+            <p>@infoItem.Text</p>
+        </div>
+    }
+</div>
+
+<div class="session-wrapper">
+    <p>Du gick in på denna webbplats: <b>@ViewBag.dateSession</b></p>
+</div>

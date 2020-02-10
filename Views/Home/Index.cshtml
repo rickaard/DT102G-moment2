@@ -1,0 +1,16 @@
+@{
+    ViewData["Title"] = "Startsidan";
+    ViewBag.PageName = "index";
+}
+
+<h2>Välkommen!</h2>
+<div class="text-wrapper">
+    <h4>@ViewData["subtitle"]</h4>
+    <p>@ViewData["content"]</p>
+</div>
+
+
+
+<div class="session-wrapper">
+    <p>Du gick in på denna webbplats: <b>@ViewBag.dateSession</b></p>
+</div>

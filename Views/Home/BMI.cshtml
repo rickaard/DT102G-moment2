@@ -1,0 +1,26 @@
+@{
+    ViewData["Title"] = "BMI";
+    ViewBag.PageName = "bmi";
+}
+
+<h2>Räkna ut ditt BMI:</h2>
+
+<form asp-controller="Home" asp-action="BMI" method="post">
+    <div class="form-group">
+        <label for="weight-input">Vikt:</label>
+        <input type="number" name="weight-input" id="weight-input" required min="1"/>
+    </div>
+    <div class="form-group">
+        <label for="height-input">Längd i CM</label>
+        <input type="number" name="height-input" id="height-input" required min="1"/>
+    </div>
+    <div class="form-group border-top">
+        <input type="submit" value="Beräkna" />
+        <p>Ditt BMI: @ViewBag.BMI</p>
+    </div>
+</form>
+
+<div class="session-wrapper">
+    <p>Du gick in på denna webbplats: <b>@ViewBag.dateSession</b></p>
+</div>
+

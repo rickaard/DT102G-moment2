@@ -1,0 +1,240 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-size: 1.2em;
+    line-height: 1.6em;
+}
+.container {
+    width: 100%;
+    position: relative;
+    min-height: 100vh;
+}
+.bg-wrapper {
+    background: url("../images/bg.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: calc(100vh - 93px);
+}
+
+
+/*
+UTILS
+*/
+.box-shadow {
+    box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
+}
+
+
+
+
+
+
+
+/* 
+HEADER / NAV
+*/
+.nav-wrapper {
+    border-bottom: 1px solid #e5e5e5;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: .2em 1.5em;
+}
+.nav-wrapper img {
+    max-width: 100px;
+    width: 100%;
+}
+.nav-items ul {
+    display: flex;
+    flex-direction: row;
+}
+.nav-items ul li {
+    list-style-type: none;
+    margin-left: 2rem;
+    text-transform: uppercase;
+}
+.nav-items ul li a:hover {
+    border-bottom: 2px solid #0f76bd;
+}
+.nav-items ul li .active {
+    border-bottom: 2px solid #5bcaf5;
+}
+.nav-items ul li a {
+    text-decoration: none;
+    color: inherit;
+}
+.menuBtn {
+    display: none;
+    border: none;
+    padding: 0.1em 0.3em;
+    background: transparent;
+    cursor: pointer;
+    font-size: 1.4em;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+.closeBtn {
+    display: none;
+    border: none;
+    padding: 0.1em 0.3em;
+    background: transparent;
+    cursor: pointer;
+    font-size: 1.4em;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    position: absolute;
+    top: 12px;
+    right: 16px;
+    font-size: 36px;
+    margin-left: 50px;
+    color: #147ec0;
+  }
+.closeBtn:hover {
+    color: #000;
+}
+
+
+
+
+/* 
+* CONTENT
+*/
+.text-wrapper {
+	margin-top: 5rem;
+	max-width: 600px;
+	margin: 5rem auto 1rem 5rem;
+}
+.text-wrapper h4 {
+    margin-bottom: 1rem;
+}
+.content-wrapper {
+    max-width: 800px;
+    margin: 0 auto 3rem auto;
+    padding-top: 3rem;
+}
+.content-wrapper h2 {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+
+.items-container {
+    display: flex;
+    justify-content: space-between;
+
+}
+.item-wrapper {
+    max-width: 250px;
+    border: 1px solid #eeeeeea6;
+    padding: 2rem;
+    box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
+    border-radius: 8px;
+    background: #fdfdfd;
+}
+.item-wrapper img {
+    max-width: 100%;
+}
+.session-wrapper {
+    position: absolute;
+    bottom: 10px;
+    width: 350px;
+    left: 50%;
+    margin-left: -175px;
+}
+
+
+/*
+* FORM
+*/
+form {
+    width: 100%;
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    border: 1px solid #757373;
+    border-radius: 8px;
+    background: #fdfdfd;
+}
+.form-group {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 1rem;
+}
+.form-group label, .form-group input, .form-group p {
+    width: 40%;
+    padding: .3rem .3rem;
+    font-size: 1.4rem;
+}
+.form-group input[type="submit"] {
+    background: #2fabe6;
+    color: #fff;
+}
+.form-group input[type="submit"]:hover {
+    background: #1566ab;
+    cursor: pointer;
+}
+.form-group.border-top {
+    border-top: 1px solid #757373;
+}
+.form-group input {
+    border-radius: 8px;
+    border: 1px solid #b0afaf;
+    text-align: center;
+}
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 800px) {
+    /* 
+    * MOBILE MENU
+    */
+    .menuBtn {
+        display: inline-block;
+    }
+    .nav-items {
+        width: 100%;
+        height: 0;
+        position: absolute;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        overflow-x: hidden;
+        transition: 0.2s;
+        background: #fff;
+        box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .closeBtn {
+        display: inline-block;
+    }
+
+
+
+    
+}
+
+
